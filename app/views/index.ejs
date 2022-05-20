@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Over or Underplayed?</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>    
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="container m-5">
+            <div class="row">
+                <div class="col-7">
+                    <h1>Top 20 Songs</h1>
+                </div>
+                <div class="col-3 text-end">
+                    <input class="form-control m-2" type="text" id="search" onkeyup="filterTable()" placeholder="Search">
+                </div>
+                <div class="col-2">
+                    <a class="btn btn-secondary m-2" href="/all_reviews/">See all Reviews</a>
+                </div>
+            </div>
+            <table class="table table-striped table-hover table-bordered" id="chartsTable">
+                <thead>
+                    <tr>
+                        <td>Rank</td>
+                        <td>Title</td>
+                        <td>Artist(s)</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let i = 0; i < top20.length; i++) { %>
+                        <tr>
+                            <td class="col-1"><%= i + 1 %></td>
+                            <td class="col-4"><%= top20[i].title %></td>
+                            <td class="col-4"><%= top20[i].subtitle %></td>
+                            <td class="col-3 text-end">
+                                    <form action="/write_review/" method="get">
+                                        <input type="number" name="key" value="<%= top20[i].key %>" hidden>
+                                        <input type="text" name="title" value="<%= top20[i].title %>" hidden>
+                                        <input type="text" name="artists" value="<%= top20[i].subtitle %>" hidden>
+                                        <div class="btn-group w-100" role="group">
+                                            <button class="btn btn-primary" type="submit">Write Review</button>
+                                            <a class="btn btn-secondary" href="/all_reviews/?search=<%= top20[i].title %>">Read Reviews</a>
+                                        </div>
+                                    </form>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            $("#chartsTable").tablesorter();
+        });
+        function filterTable() {
+            var input, filter, table, tr, td, i, txtValue, visible;
+            input = document.getElementById("search");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("chartsTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 1; i < tr.length; i++) {
+                visible = false;
+                for (j = 0; j < tr[i].getElementsByTagName("td").length; j++) {
+                    td = tr[i].getElementsByTagName("td")[j];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            visible = true;
+                        }
+                    }    
+                }
+                if (visible) {
+                    tr[i].style.display = "";
+                }
+                else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+        document.onload(filterTable());
+    </script>
+</body>
+</html>
