@@ -24,7 +24,7 @@ const displayReview = asyncHandler(async (req, res) => {
 })
 
 // @desc    Display all reviews
-// @route   GET /
+// @route   GET /all_reviews
 // @access  Public
 const displayAllReviews = asyncHandler(async (req, res) => {
     reviews = await getAllReviews()
@@ -38,7 +38,7 @@ const displayAllReviews = asyncHandler(async (req, res) => {
 })
 
 // @desc    Display the write review page
-// @route   GET /write_review/
+// @route   GET /write_review
 // @access  Public
 const displayWriteReview = asyncHandler(async (req, res) => {
     res.render("writeReview", {
@@ -51,7 +51,7 @@ const displayWriteReview = asyncHandler(async (req, res) => {
 })
 
 // @desc    Post to the write review page
-// @route   POST /write_review/
+// @route   POST /write_review
 // @access  Public
 const writeReview = asyncHandler(async (req, res) => {
     let status = await postReview(
