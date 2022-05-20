@@ -80,9 +80,10 @@ interesting for the user experience.
 For a web application as such, I believe the best method of deployment would be to use Heroku.
 The process is simple as all that must be done is to:
 
+-   Split the API and Web App into two repositories, each to be deployed to Heroku
 -   Set the NODE_ENV in .env to production
 -   Set the API_URL in the .env to the new URL
--   Split the API and Web App into two repositories, each to be deployed to Heroku
+-   Set the ports to either 80 or 443 for HTTP or HTTPS respectively
 -   Ensure the correct packages are installed in each repository, and that each have their own .env file
 -   Create an account on Heroku
 -   Run the following commands in the terminal for each project file and follow the steps in the terminal
