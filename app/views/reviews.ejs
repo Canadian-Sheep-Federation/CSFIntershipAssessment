@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reviews</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="container m-5">
+            <div class="row">
+                <div class="col-7">
+                    <% if (reviews.length === 1) { %>
+                        <h1><%= reviews[0].username %>'s Review</h1>
+                    <% } else { %>
+                        <h1>Reviews</h1>
+                    <% } %>
+                </div>        
+                <div class="col-3 text-end">
+                    <input class="form-control m-2" type="text" id="search" onkeyup="filterTable()" placeholder="Search" value="<%= search %>">
+                </div>
+                <div class="col-2 text-end">
+                    
+                    <a class="btn btn-secondary m-2" href="/">Back to Charts</a>
+                </div>
+            </div>
+            <table class="table table-striped table-hover table-bordered" id="reviewsTable">
+                <thead>
+                    <tr>
+                        <td>User</td>
+                        <td>Title</td>
+                        <td>Artists</td>
+                        <td>Review</td>
+                        <td>Overplayed or Underplayed</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let i = 0; i < reviews.length; i++) { %>
+                        <tr>
+                            <td class="col-1"><%= reviews[i].username %></td>
+                            <td class="col-2"><%= reviews[i].song.title %></td>
+                            <td class="col-2"><%= reviews[i].song.artists %></td>
+                            <td class="col-5"><%= reviews[i].text %></td>
+                            <td class="col-2"><%= reviews[i].overOrUnder %></td>
+                        </tr>
+                    <% } %>  
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            $("#reviewsTable").tablesorter();
+        });
+        function filterTable() {
+            var input, filter, table, tr, td, i, txtValue, visible;
+            input = document.getElementById("search");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("reviewsTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 1; i < tr.length; i++) {
+                visible = false;
+                for (j = 0; j < tr[i].getElementsByTagName("td").length; j++) {
+                    td = tr[i].getElementsByTagName("td")[j];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            visible = true;
+                        }
+                    }    
+                }
+                if (visible) {
+                    tr[i].style.display = "";
+                }
+                else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+        document.onload(filterTable());
+    </script>
+</body>
+</html>

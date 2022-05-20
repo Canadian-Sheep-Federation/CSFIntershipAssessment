@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Write Review</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid d-flex justify-content-center">
+      <div class="container m-5">
+        <div class="row">
+          <div class="col-6">
+              <h1>Write a Review</h1>
+          </div>
+          <div class="col-6 text-end">
+              <a class="btn btn-secondary m-2" href="/">Back to Charts</a>
+          </div>
+        </div>
+        <form action="/write_review/" method="post">
+            <label for="title">Song Title</label>
+            <input class="form-control" type="text" name="title" value="<%= title %>" readonly>
+            <label for="artists">Artist(s)</label>
+            <input class="form-control" type="text" name="artists" value="<%= artists %>" readonly>
+            <label for="username">Username</label>
+            <input class="form-control" type="text" name="username" value="<%= username %>">
+            <label for="text">Review</label>
+            <input class="form-control" type="text" name="text" value="<%= text %>">
+            <label for="overOrUnder">Overplayed or underplayed?</label>
+            <select class="form-control" name="overOrUnder">
+                <% if (overOrUnder === "Overplayed") { %>
+                  <option value="Overplayed" selected>Overplayed</option>
+                  <option value="Underplayed">Underplayed</option>
+                <% } else if (overOrUnder === "Underplayed") { %>
+                  <option value="Overplayed">Overplayed</option>
+                  <option value="Underplayed" selected>Underplayed</option>
+                <% } else { %>
+                  <option value="" selected disabled hidden>Select</option>
+                  <option value="Overplayed">Overplayed</option>
+                  <option value="Underplayed">Underplayed</option>
+                <% } %>
+            </select>
+            <button class="btn btn-primary mt-2" type="submit">Submit Review</button>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
