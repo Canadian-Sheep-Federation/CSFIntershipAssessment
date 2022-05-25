@@ -1,0 +1,6 @@
+I would modularize the gait analysis portion of machine learning because the
+training portion of your neural network through gait analysis should remain
+the same for different things you are trying to identify.
+
+After this, I would be able to use this module with any dataset, so the only 
+big step would be to read the dataset into python.
