@@ -3,7 +3,7 @@ API which allows users to access a database storing responses to a survey about 
 Written with Node.js, Express, database using SQLite.
 
 ## Running the API
-Navigate to the book-survey-data-api directory and run `node index.js`. 
+Navigate to the book-survey-data-api directory, download required node modules, and run `node index.js`. 
 By default the API runs on `http://localhost:3000`.
 
 ## API Endpoints:
