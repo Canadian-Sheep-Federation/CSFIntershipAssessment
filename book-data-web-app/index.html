@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Data Survey</title>
+  </head>
+  <body>
+    <h1>Book Data Survey</h1>
+
+    <!-- Section for adding response to database -->
+
+    <h3>Submit a response:</h3>
+    
+	  <form id="survey_form">
+        <label for="name">Your full-name: </label>
+        <input type="text" name="name" ><br>
+        <label for="name">Your favorite book: </label>
+        <input type="text" name="favorite_book" ><br>
+        <label for="name">The book's author </label>
+        <input type="text" name="book_author" ><br>
+        <input type="submit" value="Submit">
+    </form><br>
+
+    <!-- Section for querying database -->
+
+    <h3>Database:</h3>
+
+    <button id="get_all_responses">Click to see all responses</button>
+
+    <p>Or find a response by id:</p>
+    <form id="search_form">
+      <label for="response_id">Response id: </label>
+      <input type="text" name="response_id" >
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+
+    <div id="response_container"></div> <!-- Displays query results -->
+
+    <script src="index.js"></script>
+  </body>
+</html>
