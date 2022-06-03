@@ -14,15 +14,19 @@ Table of Contents
 ### Web Application:
 
    1. Home/Main Page:
-   <img width="1440" alt="Screen Shot 2022-06-03 at 2 54 30 PM" src="https://user-images.githubusercontent.com/93673736/171932247-d5d7cfcd-255d-4afe-9d5c-8def326e998a.png">
+   <img width="1000" alt="Screen Shot 2022-06-03 at 2 54 30 PM" src="https://user-images.githubusercontent.com/93673736/171932247-d5d7cfcd-255d-4afe-9d5c-8def326e998a.png">
 
-   <img width="1440" alt="Screen Shot 2022-06-03 at 2 54 44 PM" src="https://user-images.githubusercontent.com/93673736/171932271-178ac4de-e5ce-4911-add2-3cd8c6baee84.png">
+   2. Survey/Form Page:
+   <img width="1000" alt="Screen Shot 2022-06-03 at 2 54 44 PM" src="https://user-images.githubusercontent.com/93673736/171932271-178ac4de-e5ce-4911-add2-3cd8c6baee84.png">
 
-   <img width="1440" alt="Screen Shot 2022-06-03 at 2 54 55 PM" src="https://user-images.githubusercontent.com/93673736/171932284-351ae8a1-2725-446d-9800-68cc438ad946.png">
+   3. Acess Survey Data Page:
+   <img width="1000" alt="Screen Shot 2022-06-03 at 2 54 55 PM" src="https://user-images.githubusercontent.com/93673736/171932284-351ae8a1-2725-446d-9800-68cc438ad946.png">
 
-   <img width="1440" alt="Screen Shot 2022-06-03 at 2 55 03 PM" src="https://user-images.githubusercontent.com/93673736/171932297-75668a7f-9f5e-4369-a521-80d08ac80933.png">
+   4. All Survey Data:
+   <img width="1000" alt="Screen Shot 2022-06-03 at 2 55 03 PM" src="https://user-images.githubusercontent.com/93673736/171932297-75668a7f-9f5e-4369-a521-80d08ac80933.png">
 
-   <img width="1440" alt="Screen Shot 2022-06-03 at 2 55 12 PM" src="https://user-images.githubusercontent.com/93673736/171932315-8283228e-6275-484f-8b70-08448c244745.png">
+   5. Data by Id:
+   <img width="1000" alt="Screen Shot 2022-06-03 at 2 55 12 PM" src="https://user-images.githubusercontent.com/93673736/171932315-8283228e-6275-484f-8b70-08448c244745.png">
 
 <a name=built></a>
 ### Built With:
