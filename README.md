@@ -1,4 +1,4 @@
-# CSFIntershipAssessment
+# CSFIntershipAssessment - COVID-19 Canada Survey/Data Collection Web Application
 
 Table of Contents
 1. [About this Project](#about)
@@ -13,8 +13,22 @@ Table of Contents
 <a name=pages></a>
 ### Web Application:
 
+   <img width="1440" alt="Screen Shot 2022-06-03 at 2 54 30 PM" src="https://user-images.githubusercontent.com/93673736/171932247-d5d7cfcd-255d-4afe-9d5c-8def326e998a.png">
+
+   <img width="1440" alt="Screen Shot 2022-06-03 at 2 54 44 PM" src="https://user-images.githubusercontent.com/93673736/171932271-178ac4de-e5ce-4911-add2-3cd8c6baee84.png">
+
+   <img width="1440" alt="Screen Shot 2022-06-03 at 2 54 55 PM" src="https://user-images.githubusercontent.com/93673736/171932284-351ae8a1-2725-446d-9800-68cc438ad946.png">
+
+   <img width="1440" alt="Screen Shot 2022-06-03 at 2 55 03 PM" src="https://user-images.githubusercontent.com/93673736/171932297-75668a7f-9f5e-4369-a521-80d08ac80933.png">
+
+   <img width="1440" alt="Screen Shot 2022-06-03 at 2 55 12 PM" src="https://user-images.githubusercontent.com/93673736/171932315-8283228e-6275-484f-8b70-08448c244745.png">
+
 <a name=built></a>
 ### Built With:
+  - [MySQL](https://www.mysql.com/)
+  - [Prisma](https://www.prisma.io/)
+  - [Node.js](https://nodejs.org/en/)
+  - [React](https://reactjs.org/)
 
 <a name=runnapp></a>
 ## Running the Application:
