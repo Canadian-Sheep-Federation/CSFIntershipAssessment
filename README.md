@@ -65,8 +65,28 @@ Table of Contents
       - Prisma
       - Node.js
       - React
+      - Postman
     
-   2. 
+   2. API Folder
+      
+      - Using terminal, enter the api folder and run the following: npm install
+      - Afterwards run the following, in order to download the necessary dependencies: npm install express cors body-parser morgan
+      - Create a new database using MySQL
+      - Create a .env file and fill the DATABASE_URL string with the correct password and root information for the database that was just newly created
+     
+        <img width="800" alt="Screen Shot 2022-06-03 at 3 56 48 PM" src="https://user-images.githubusercontent.com/93673736/171941278-781f5a60-7357-4b2e-a124-3cefaca7e11a.png">
+      - Run the following: prisma migrate dev --name init and prisma generate
+      - Try running the api in the index.js file using the command: nodemon index.js
+      - Once the api is running, try testing to see if it works using Postman
+  
+  3. Client Folder
+  
+     - Using terminal, enter the client folder and run the following: npm install
+     - Run the following to install bootstrap dependencies: npm i bootstrap
+     - Run the following to install font-awesome dependencies: npm i @fortawesome/fontawesome-free
+     - Run the following to install mdbreact dependencies: npm i mdbreact
+     - To start the react web application, input the following commmand in terminal: npm start
+      
 
 <a name=contact></a>
 ## Contact
