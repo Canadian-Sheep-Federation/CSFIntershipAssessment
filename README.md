@@ -1,4 +1,4 @@
-# CSFIntershipAssessment - COVID-19 Canada Survey/Data Collection Web Application
+# CSFIntershipAssessment - Software Developer Assessment - COVID-19 Canada Survey/Data Collection Web Application
 
 Table of Contents
 1. [About this Project](#about)
