@@ -13,6 +13,7 @@ Table of Contents
 <a name=pages></a>
 ### Web Application:
 
+   1. Home/Main Page:
    <img width="1440" alt="Screen Shot 2022-06-03 at 2 54 30 PM" src="https://user-images.githubusercontent.com/93673736/171932247-d5d7cfcd-255d-4afe-9d5c-8def326e998a.png">
 
    <img width="1440" alt="Screen Shot 2022-06-03 at 2 54 44 PM" src="https://user-images.githubusercontent.com/93673736/171932271-178ac4de-e5ce-4911-add2-3cd8c6baee84.png">
