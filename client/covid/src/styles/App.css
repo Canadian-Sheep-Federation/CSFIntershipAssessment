@@ -1,0 +1,17 @@
+.covid-data{
+    display: flex;
+    flex-direction: column;
+    margin: 60px;
+}
+
+.cases-by-date{
+    margin-bottom: 20px;
+}
+
+.datatable{
+    margin-bottom: 20px;
+}
+
+.form-floating{
+    margin-right:1000px;
+}

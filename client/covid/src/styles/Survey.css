@@ -1,0 +1,13 @@
+.survey{
+    display: flex;
+    flex-direction: column;
+    margin: 60px
+}
+
+.first, .last, .email, .phone, .province, .doses, .comment {
+    margin-bottom: 25px;
+}
+
+.btn{
+    width: fit-content;
+}
