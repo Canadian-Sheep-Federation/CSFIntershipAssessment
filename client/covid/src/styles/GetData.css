@@ -1,0 +1,6 @@
+.get-survey{
+    display: flex;
+    flex-direction: column;
+    margin: 200px
+}
+
