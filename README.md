@@ -1,5 +1,5 @@
 # Local Dev setup
-- include ($ATLAS_URI='...') variable in a .env file placed in root directory that links to an active mongodb atlas cluster
+- include ($ATLAS_URI=...) variable in a .env file placed in root directory that links to an active mongodb atlas cluster
 - run `yarn` twice in ~/ and ~/frontend to build dependencies
 - `yarn tsnode` in ~/ to start express.js on port 4000
 - `yarn start` in ~/frontend to start react on port 3000
