@@ -1,14 +1,14 @@
 # Cat Bookmarker
 My submission for the software developer assessment consumes JSON
 representations of cat images accessible via the [Cataas](https://cataas.com)
-API, the links to which can be permanetly stored in a bookmark database.
+API, the links to which can be permanently stored in a bookmark database.
 
 ## Details
 The form submits four pieces of data:
  - `category`: The name of the category the bookmark will be stored under
  - `notes`: Any extra details, stored as a single string
  - `remote_id`: The ID of the resource accessible via Cataas' API
- ` `creator`: A pseudo-anonymous integer ID representing the actor bookmarking the image
+ - `creator`: A pseudo-anonymous integer ID representing the actor bookmarking the image
 
 The first two are literally HTML input elements. The third is selected randomly by repeatedly pressing the "Show New Cat" button. The third is represented by a route both in Phoenix and using React Router.
 
@@ -20,7 +20,7 @@ The tech stack for this project is as follows:
 
 The front-end of this project is a single-page app that uses React Router to navigate between the two "pages."
 
-All of the API endpoints are under the `/api/v1/` route, and since this project only really does bookmarking, all of them ended up being under `/api/v1/bookmark`. The three required routes are as followes, followed by the other routes I added for convenience:
+All of the API endpoints are under the `/api/v1/` route, and since this project only really does bookmarking, all of them ended up being under `/api/v1/bookmark`. The three required routes are as follows, followed by the other routes I added for convenience:
  - POST /api/v1/bookmark - Accepts a JSON payload with keys `remote_id`, `notes`, and `category` and stores it in the database.
  - GET /api/v1/bookmark/single/:id - Returns a single bookmark with the given ID. If The user doesn't have any bookmarks with that ID, the server returns an error with a 404 status code.
  - GET /api/v1/bookmark - Returns all of the user's bookmarks.
@@ -35,7 +35,7 @@ I didn't feel like putting together a large dictionary of words, so I just used 
 
 The user's page is accessible by accessing the `/u/:id` route, where `:id` is the user's ID number
 
-When making calls to the API, the client passes an `Authorization` header to their request including their ID, such as `Authorization: Basic 1234...`. If this header is omitted or malformed, the server returns a 401 status code. Not production-grade by any meanse, but not bad for a cat bookmarking app.
+When making calls to the API, the client passes an `Authorization` header to their request including their ID, such as `Authorization: Basic 1234...`. If this header is omitted or malformed, the server returns a 401 status code. Not production-grade by any means, but not bad for a cat bookmarking app.
 
 ## Running the server
 To run the server, you'll need Elixir installed on your device, which depends
@@ -52,7 +52,7 @@ set up to assume that the database username is "postgres" and the password is
 ```bash
 $ cd bookmarker
 $ mix deps.get      # Install Elixir dependencies
-$ mix ecto.migrate  # Set up the database
+$ mix ecto.setup    # Set up the database
 $ cd assets
 $ npm install       # Install Node dependencies
 $ cd ..
@@ -101,7 +101,7 @@ security and memorability.
 
 That being said, the biggest issue with using Authorization headers is that if
 the connection isn't being made over HTTPS, then confidential information is
-being traded in plaintext. Either additional steps would have to be taken to
+being traded in plain-text. Either additional steps would have to be taken to
 prevent snooping or an alternative, more rigorous method of user-management
 would have to be put into effect to ensure the security of everyone's cat
 bookmarks.
