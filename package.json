@@ -1,0 +1,38 @@
+{
+  "name": "csfintershipassessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsnode": "ts-node server/index.ts",
+    "node": "node dist/index.js",
+    "watch": "tsc -w",
+    "dev": "nodemon -r dotenv/config dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ansxnlee/CSFIntershipAssessment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ansxnlee/CSFIntershipAssessment/issues"
+  },
+  "homepage": "https://github.com/ansxnlee/CSFIntershipAssessment#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.39",
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
+  }
+}

@@ -1,40 +1,29 @@
 # Background
 
-As a Canadian Sheep Federation intern, you will be tasked with creating
-and developing web applications and APIs. This take home assignment is
-designed to test your knowledge of the concepts involved.
+Canadian Sheep Federation intern take home assignment.
 
-You will create the following:
+Tasks completed:
 
 -   An API that writes to a data store
--   A web application that consumes the API you\'ve developed and a
-    public API of your choosing
+-   A web application that consumes the API developed and a
+    public API of my choosing
 
-If you\'ve never created an API or a web-application, don\'t worry. Give
-it your best shot and leave detailed comments and documentation for what
-you don\'t know and what you think it should do.
-
-This task should take approximately two hours
 
 Select your public API from here:
 <https://github.com/public-apis/public-apis>
 
-# API
+Chosen public API: [Gutendex](https://gutendex.com/)
 
-You must build a REST-ful API that represents some sort of form. The
-form should mesh well with the public API you\'ve chosen. For instance,
-if you\'ve chosen a movie API for your public API, this form could be a
-survey about a specific movie or movies of a certain director.
+# API development notes
 
-The form must have three (3!) fields minimum.
+- Created a barebones api with express.js/typescript
+- included routes for 'get', 'get/:id', and 'post'
+- data stored in a mongoDB atlas cluster and accessed via mongoose
+- .env needs to be include in root folder for mongoose access (ie. prove your own $ATLAS_URI = '...')
 
-The language and framework in which the API is implemented is up to you.
-At the CSF, we use Node.js and express.
 
-The API must store the form data in some permanent data store. At the
-CSF, we use mongodb. A good option for this assessment could be sqlite.
 
-The API must have the following endpoints:
+The API contains the following endpoints:
 
 -   POST /: Takes in the form and stores it in your chosen data store.
     Should return the id of the newly created form response.
@@ -42,24 +31,43 @@ The API must have the following endpoints:
     would return the form corresponding to the id 1
 -   GET /: Returns all responses to the form
 
-Be sure to document your code thoroughly and include instructions for
-how to run your api.
+# Web application + development notes
 
-# Web application
-
-You must build a web application that:
+Built a web application that:
 
 -   Allows users to query the public API you\'ve selected
 -   Allows users to enter responses to the form you designed earlier and
     view the other responses to the form
 
+- created a single page app with react and stylized with chakra-ui
+- includes option to query from backend DB or public api
+- lists and can post to backend DB
+
 # Bonus Points
 
 ## Discuss how the application and api could be extended and improved
 
+Backend improvements:
+- implement full crud functionality
+- implement filters and pagination for queries
+- add more robust middleware such as validation/authentication for requests
+- maybe find an alternative to mongoDB's use of string IDs?
+
+Frontend improvements:
+- add option to post publicAPI queries straight to DB
+- make css styling more "professional"
+
+
 ## Discuss how the application and api should be deployed
+- wrap codebase in a docker container
+- setup mongoDB with AWS
+- buy a domain from digital ocean or another competitor
 
 ## Intuitive design and user interface
+an intuitive design to me means:
+- a ui that is responsive 
+- ui that provides adequate mouse/keyboard event feedback
+- accessbility to impaired users
 
 # Submission
 
