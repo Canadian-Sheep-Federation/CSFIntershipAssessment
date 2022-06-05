@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        /*
+          Create a connection to sqlite and create a database table:
+          CREATE TABLE userFaveFruit (
+	        user_id INTEGER PRIMARY KEY,
+	        fruit_name TEXT NOT NULL,
+	        fruit_colour TEXT NOT NULL
+          );
+        */
+    
+        <!--user prompt-->
+        <p>Enter the fruit you're looking for then click "get"</p>
+        <form id="getFruit" action="/action_page.php">
+            fruit name: <input type="text" name="fruitName"><br>
+        </form>
+
+        <button onclick="getFruitInfo()">get</button>
+
+        <script>
+            function getFruitInfo() {
+                /* get fruit info by adding public API to this web app using
+                    https://www.fruityvice.com/#3, then use the get method along with
+                    the input: "api/fruit/" + x.elements[0].value (where x = documents.getelementbyid("getFruit"))
+                */
+            }
+        </script>
+
+        <!--user prompt-->
+        <p>Enter the fruit you want to add then click "put"</p>
+        <form id="putFruit" action="/action_page.php">
+            fruit name: <input type="text" name="fruitInfo"><br>
+        </form>
+
+        <button onclick="putFruitInfo()">put</button>
+
+        <script>
+            function putFruitInfo() {
+             /* get fruit info from user, then use the put method in the public API
+                along with the input in the proper form
+            */
+            }
+        </script>
+
+        <!--POST-->
+        <p>Enter the following information then click "store"</p>
+        <form id="getFruit" action="/action_page.php">
+            Favourite fruit name: <input type="text" name="userFruitName"><br>
+            Colour of favourite fruit: <input type="text" name="userFruitColour"><br>
+            UserID: <input type="text" name="id"><br>
+        </form>
+
+        <button onclick="storeUserInfo()">store</button>
+
+        <script>
+            function storeUserInfo() {
+                /* insert a new row in the table created in index.js and add x.elements[0].value (for elements 0-2)
+                */
+            }
+        </script>
+
+        <!--GET ID
+            use sql query and output to user:
+            SELECT *
+            WHERE user_id == ID
+        -->
+
+        <!--GET
+            use sql query and output to user:
+            SELECT *-->
+
+    </body>
+</html>
