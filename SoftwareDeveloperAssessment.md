@@ -57,7 +57,25 @@ You must build a web application that:
 
 ## Discuss how the application and api could be extended and improved
 
+- Create a connection between the form and the API queries; perhaps use some other API that 
+will guess what kind of dog is desired by the User and then display that image
+
+- Add support for more API form endpoints (UPDATE, DELETE, etc.)
+
+- Add more security measures, namely against "injection attacks" (since the web app accepts
+untrusted data from an input field with no sanitation.) Add verification to user input, perhaps add a login feature, etc.
+
+- Better styling, mainly on the dog breed list 
+
 ## Discuss how the application and api should be deployed
+
+- I would start by deploying the front-end (app) and back-end (api) code onto a virtual machine (AWS EC2 instance, etc.)
+
+- Then, I would setup a web server like Nginx on the virtual machine so that it listens
+to a particular port and displays the correct pages or makes back-end requests correctly
+depending on what the user requests
+
+- Finally, we need to ensure the front-end and back-end communicate properly on the virtual machine
 
 ## Intuitive design and user interface
 
@@ -65,3 +83,8 @@ You must build a web application that:
 
 Fork this repository and create a pull request for your branch back into
 this repo once completed.
+
+
+# Starting the application
+
+Navigate to the "api" file and run npm start to start the back-end. Similarily, navigate to the "app" file and run npm start to start the front-end.
